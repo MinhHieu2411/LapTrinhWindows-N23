@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Works\\Projects\\C#\\btln21\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|g:\\works\\projects\\c#\\btln21\\btln21\\home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|g:\\works\\projects\\c#\\btln21\\btln21\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|g:\\works\\projects\\c#\\btln21\\btln21\\formnhapvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\formnhapvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|g:\\works\\projects\\c#\\btln21\\btln21\\formnhaphdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\formnhaphdv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|g:\\works\\projects\\c#\\btln21\\btln21\\formnhaptour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\formnhaptour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|G:\\Works\\Projects\\C#\\btln21\\btln21\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Home.Designer.cs",
+              "DocumentMoniker": "G:\\Works\\Projects\\C#\\btln21\\btln21\\Home.Designer.cs",
+              "RelativeDocumentMoniker": "btln21\\Home.Designer.cs",
+              "ToolTip": "G:\\Works\\Projects\\C#\\btln21\\btln21\\Home.Designer.cs*",
+              "RelativeToolTip": "btln21\\Home.Designer.cs*",
+              "ViewState": "AgIAAAwBAAAAAAAAAAAuwCEBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T08:03:10.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "G:\\Works\\Projects\\C#\\btln21\\btln21\\Home.cs",
+              "RelativeDocumentMoniker": "btln21\\Home.cs",
+              "ToolTip": "G:\\Works\\Projects\\C#\\btln21\\btln21\\Home.cs [Design]",
+              "RelativeToolTip": "btln21\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T09:09:28.904Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.cs",
+              "DocumentMoniker": "G:\\Works\\Projects\\C#\\btln21\\btln21\\Home.cs",
+              "RelativeDocumentMoniker": "btln21\\Home.cs",
+              "ToolTip": "G:\\Works\\Projects\\C#\\btln21\\btln21\\Home.cs",
+              "RelativeToolTip": "btln21\\Home.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T07:08:36.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "formNhapVehicle.cs [Design]",
+              "DocumentMoniker": "G:\\Works\\Projects\\C#\\btln21\\btln21\\formNhapVehicle.cs",
+              "RelativeDocumentMoniker": "btln21\\formNhapVehicle.cs",
+              "ToolTip": "G:\\Works\\Projects\\C#\\btln21\\btln21\\formNhapVehicle.cs [Design]",
+              "RelativeToolTip": "btln21\\formNhapVehicle.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:49:18.824Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "formNhapTour.cs [Design]",
+              "DocumentMoniker": "G:\\Works\\Projects\\C#\\btln21\\btln21\\formNhapTour.cs",
+              "RelativeDocumentMoniker": "btln21\\formNhapTour.cs",
+              "ToolTip": "G:\\Works\\Projects\\C#\\btln21\\btln21\\formNhapTour.cs [Design]",
+              "RelativeToolTip": "btln21\\formNhapTour.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:46:36.976Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "formNhapHDV.cs [Design]",
+              "DocumentMoniker": "G:\\Works\\Projects\\C#\\btln21\\btln21\\formNhapHDV.cs",
+              "RelativeDocumentMoniker": "btln21\\formNhapHDV.cs",
+              "ToolTip": "G:\\Works\\Projects\\C#\\btln21\\btln21\\formNhapHDV.cs [Design]",
+              "RelativeToolTip": "btln21\\formNhapHDV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T07:47:03.191Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
