@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lAXkrCASmns=",
+  "dgSpecHash": "8G1ikvplrJw=",
   "success": true,
-  "projectFilePath": "G:\\Works\\Projects\\C#\\btln21\\btln21\\btln21.csproj",
+  "projectFilePath": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\btln21.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GIGABYTE\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\GIGABYTE\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

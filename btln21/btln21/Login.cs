@@ -13,9 +13,9 @@
             string username = textBox1.Text;
             string password = textBox2.Text;
 
-            if(username == "" || password == "")
+            if (username == "" || password == "")
             {
-                MessageBox.Show("Tên đăng nhập và mật khẩu không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                MessageBox.Show("Tên đăng nhập và mật khẩu không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -30,7 +30,7 @@
                 }
                 else
                 {
-                MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -39,5 +39,6 @@
         {
             this.Text = "Đăng nhập";
         }
+
     }
 }

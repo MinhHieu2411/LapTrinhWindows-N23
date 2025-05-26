@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            inputCap_vehicle = new TextBox();
             inputLP_vehicle = new TextBox();
             inputDes_vehicle = new TextBox();
             label2 = new Label();
@@ -37,6 +36,7 @@
             label4 = new Label();
             label5 = new Label();
             inputID_vehicle = new TextBox();
+            inputCap_vehicle = new ComboBox();
             label1 = new Label();
             btnConfirm = new Button();
             btnCancel = new Button();
@@ -49,7 +49,6 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 64F));
-            tableLayoutPanel1.Controls.Add(inputCap_vehicle, 1, 3);
             tableLayoutPanel1.Controls.Add(inputLP_vehicle, 1, 2);
             tableLayoutPanel1.Controls.Add(inputDes_vehicle, 1, 1);
             tableLayoutPanel1.Controls.Add(label2, 0, 0);
@@ -57,6 +56,7 @@
             tableLayoutPanel1.Controls.Add(label4, 0, 2);
             tableLayoutPanel1.Controls.Add(label5, 0, 3);
             tableLayoutPanel1.Controls.Add(inputID_vehicle, 1, 0);
+            tableLayoutPanel1.Controls.Add(inputCap_vehicle, 1, 3);
             tableLayoutPanel1.Location = new Point(0, 108);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
@@ -66,15 +66,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel1.Size = new Size(452, 322);
             tableLayoutPanel1.TabIndex = 0;
-            // 
-            // inputCap_vehicle
-            // 
-            inputCap_vehicle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            inputCap_vehicle.Font = new Font("Segoe UI", 12F);
-            inputCap_vehicle.Location = new Point(165, 283);
-            inputCap_vehicle.Name = "inputCap_vehicle";
-            inputCap_vehicle.Size = new Size(284, 29);
-            inputCap_vehicle.TabIndex = 7;
             // 
             // inputLP_vehicle
             // 
@@ -152,6 +143,17 @@
             inputID_vehicle.Size = new Size(284, 29);
             inputID_vehicle.TabIndex = 4;
             // 
+            // inputCap_vehicle
+            // 
+            inputCap_vehicle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputCap_vehicle.Font = new Font("Segoe UI", 12F);
+            inputCap_vehicle.FormattingEnabled = true;
+            inputCap_vehicle.Items.AddRange(new object[] { "", "7", "12", "16", "29" });
+            inputCap_vehicle.Location = new Point(165, 283);
+            inputCap_vehicle.Name = "inputCap_vehicle";
+            inputCap_vehicle.Size = new Size(284, 29);
+            inputCap_vehicle.TabIndex = 7;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -174,6 +176,7 @@
             btnConfirm.TabIndex = 2;
             btnConfirm.Text = "Xác nhận";
             btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // btnCancel
             // 
@@ -215,11 +218,11 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox inputCap_vehicle;
         private TextBox inputLP_vehicle;
         private TextBox inputDes_vehicle;
         private TextBox inputID_vehicle;
         private Button btnConfirm;
         private Button btnCancel;
+        private ComboBox inputCap_vehicle;
     }
 }

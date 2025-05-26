@@ -86,6 +86,9 @@
             button4 = new Button();
             button1 = new Button();
             tabControl1 = new TabControl();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             tpCustomer.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
@@ -105,6 +108,7 @@
             // tpCustomer
             // 
             tpCustomer.BackColor = Color.Linen;
+            tpCustomer.Controls.Add(label7);
             tpCustomer.Controls.Add(label4);
             tpCustomer.Controls.Add(tableLayoutPanel4);
             tpCustomer.Controls.Add(dgvCustomers);
@@ -146,18 +150,19 @@
             // btnDeleteCustomer
             // 
             btnDeleteCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnDeleteCustomer.BackColor = Color.DarkGray;
+            btnDeleteCustomer.BackColor = Color.LightGray;
             btnDeleteCustomer.Location = new Point(269, 3);
             btnDeleteCustomer.Name = "btnDeleteCustomer";
             btnDeleteCustomer.Size = new Size(128, 45);
             btnDeleteCustomer.TabIndex = 2;
             btnDeleteCustomer.Text = "Xóa";
             btnDeleteCustomer.UseVisualStyleBackColor = false;
+            btnDeleteCustomer.Click += btnDeleteCustomer_Click;
             // 
             // btnEditCustomer
             // 
             btnEditCustomer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnEditCustomer.BackColor = Color.DarkGray;
+            btnEditCustomer.BackColor = Color.LightGray;
             btnEditCustomer.Location = new Point(136, 3);
             btnEditCustomer.Name = "btnEditCustomer";
             btnEditCustomer.Size = new Size(127, 45);
@@ -175,6 +180,7 @@
             btnAddCustomer.TabIndex = 0;
             btnAddCustomer.Text = "Thêm";
             btnAddCustomer.UseVisualStyleBackColor = false;
+            btnAddCustomer.Click += btnAddCustomer_Click;
             // 
             // dgvCustomers
             // 
@@ -222,6 +228,7 @@
             // tpTours
             // 
             tpTours.BackColor = Color.Linen;
+            tpTours.Controls.Add(label6);
             tpTours.Controls.Add(label3);
             tpTours.Controls.Add(tableLayoutPanel3);
             tpTours.Controls.Add(dgvTours);
@@ -358,6 +365,7 @@
             // tpVehicle
             // 
             tpVehicle.BackColor = Color.Linen;
+            tpVehicle.Controls.Add(label5);
             tpVehicle.Controls.Add(label2);
             tpVehicle.Controls.Add(tableLayoutPanel2);
             tpVehicle.Controls.Add(dgvVehicles);
@@ -405,6 +413,7 @@
             btnDeleteVehicle.TabIndex = 2;
             btnDeleteVehicle.Text = "Xóa";
             btnDeleteVehicle.UseVisualStyleBackColor = false;
+            btnDeleteVehicle.Click += btnDeleteVehicle_Click;
             // 
             // btnEditVehicle
             // 
@@ -526,6 +535,7 @@
             btnDeleteHdv.TabIndex = 2;
             btnDeleteHdv.Text = "Xóa";
             btnDeleteHdv.UseVisualStyleBackColor = false;
+            btnDeleteHdv.Click += btnDeleteHdv_Click;
             // 
             // btnEditHdv
             // 
@@ -537,6 +547,7 @@
             btnEditHdv.TabIndex = 1;
             btnEditHdv.Text = "Sửa";
             btnEditHdv.UseVisualStyleBackColor = false;
+            btnEditHdv.Click += btnEditHdv_Click;
             // 
             // btnAddHdv
             // 
@@ -559,6 +570,7 @@
             dgvHDV.Name = "dgvHDV";
             dgvHDV.Size = new Size(1243, 497);
             dgvHDV.TabIndex = 0;
+            dgvHDV.CellDoubleClick += dgvHDV_CellDoubleClick;
             // 
             // hdv_id
             // 
@@ -657,6 +669,39 @@
             tabControl1.Size = new Size(1265, 683);
             tabControl1.TabIndex = 0;
             // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F);
+            label5.Location = new Point(524, 3);
+            label5.Name = "label5";
+            label5.Size = new Size(211, 30);
+            label5.TabIndex = 4;
+            label5.Text = "Quản lý phương tiện";
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F);
+            label6.Location = new Point(556, 3);
+            label6.Name = "label6";
+            label6.Size = new Size(136, 30);
+            label6.TabIndex = 5;
+            label6.Text = "Quản lý Tour";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16F);
+            label7.Location = new Point(531, 3);
+            label7.Name = "label7";
+            label7.Size = new Size(203, 30);
+            label7.TabIndex = 5;
+            label7.Text = "Quản lý khách hàng";
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -748,5 +793,8 @@
         private DataGridViewTextBoxColumn customer_address;
         private Label label4;
         private Label label3;
+        private Label label6;
+        private Label label5;
+        private Label label7;
     }
 }

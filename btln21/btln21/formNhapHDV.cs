@@ -26,7 +26,7 @@ namespace btln21
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-            string id = inputID_hdv.Text;
+            string id = inputID_hdv.Text.Trim();
             string table = "TourGuide";
             string collumn = "TourGuideID";
             //check xem co truong nao nhap sai hoac de trong
@@ -35,14 +35,14 @@ namespace btln21
                 MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
                 return;
             }
-            //check lai id neu trung (dbhelper)
-            if (DatabaseHelper.checkID(id, table, collumn ))
+            //check lai id neu trung lap (dbhelper)
+            if (DatabaseHelper.checkID(inputID_hdv.Text, table, collumn))
             {
                 MessageBox.Show("ID đã tồn tại. Vui lòng chọn ID khác.");
                 return;
             }
 
-            bool success = DatabaseHelper.AddTourGuide(id, inputName_hdv.Text.Trim(), year, inputPhone_hdv.Text.Trim(), inputAddress_hdv.Text.Trim(), inputYears_hdv.ToString(), salary
+            bool success = DatabaseHelper.AddTourGuide(id, inputName_hdv.Text.Trim(), year, inputPhone_hdv.Text.Trim(), inputAddress_hdv.Text.Trim(), inputYears_hdv.Text.ToString(), salary
             );
 
             if (success)
@@ -64,7 +64,7 @@ namespace btln21
         {
             if (int.TryParse(inputYears_hdv.Text, out int year))
             {
-                decimal salary = 5000000 + (500000 * year);
+                decimal salary = 10000000 + (500000 * year);
                 inputSalary_hdv.Text = salary.ToString();
             }
             else

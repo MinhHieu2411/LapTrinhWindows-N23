@@ -32,15 +32,15 @@
             btnConfirm = new Button();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
+            inputAddress_customer = new TextBox();
+            label6 = new Label();
             inputPhone_customer = new TextBox();
-            this.inputName_customer = new TextBox();
+            inputName_customer = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             inputID_customer = new TextBox();
-            label6 = new Label();
-            inputAddress_customer = new TextBox();
             inputYob_customer = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -55,6 +55,7 @@
             btnCancel.TabIndex = 7;
             btnCancel.Text = "Hủy bỏ";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnConfirm
             // 
@@ -67,6 +68,7 @@
             btnConfirm.TabIndex = 6;
             btnConfirm.Text = "Xác nhận";
             btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // label1
             // 
@@ -88,7 +90,7 @@
             tableLayoutPanel1.Controls.Add(inputAddress_customer, 1, 4);
             tableLayoutPanel1.Controls.Add(label6, 0, 4);
             tableLayoutPanel1.Controls.Add(inputPhone_customer, 1, 3);
-            tableLayoutPanel1.Controls.Add(this.inputName_customer, 1, 1);
+            tableLayoutPanel1.Controls.Add(inputName_customer, 1, 1);
             tableLayoutPanel1.Controls.Add(label2, 0, 0);
             tableLayoutPanel1.Controls.Add(label3, 0, 1);
             tableLayoutPanel1.Controls.Add(label4, 0, 2);
@@ -106,6 +108,27 @@
             tableLayoutPanel1.Size = new Size(452, 200);
             tableLayoutPanel1.TabIndex = 4;
             // 
+            // inputAddress_customer
+            // 
+            inputAddress_customer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputAddress_customer.Font = new Font("Segoe UI", 12F);
+            inputAddress_customer.Location = new Point(165, 163);
+            inputAddress_customer.Name = "inputAddress_customer";
+            inputAddress_customer.Size = new Size(284, 29);
+            inputAddress_customer.TabIndex = 9;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.Location = new Point(3, 160);
+            label6.Name = "label6";
+            label6.Size = new Size(156, 40);
+            label6.TabIndex = 8;
+            label6.Text = "Địa chỉ";
+            label6.TextAlign = ContentAlignment.TopCenter;
+            // 
             // inputPhone_customer
             // 
             inputPhone_customer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -117,12 +140,12 @@
             // 
             // inputName_customer
             // 
-            this.inputName_customer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            this.inputName_customer.Font = new Font("Segoe UI", 12F);
-            this.inputName_customer.Location = new Point(165, 43);
-            this.inputName_customer.Name = "inputName_customer";
-            this.inputName_customer.Size = new Size(284, 29);
-            this.inputName_customer.TabIndex = 5;
+            inputName_customer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputName_customer.Font = new Font("Segoe UI", 12F);
+            inputName_customer.Location = new Point(165, 43);
+            inputName_customer.Name = "inputName_customer";
+            inputName_customer.Size = new Size(284, 29);
+            inputName_customer.TabIndex = 5;
             // 
             // label2
             // 
@@ -181,31 +204,12 @@
             inputID_customer.Size = new Size(284, 29);
             inputID_customer.TabIndex = 4;
             // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(3, 160);
-            label6.Name = "label6";
-            label6.Size = new Size(156, 40);
-            label6.TabIndex = 8;
-            label6.Text = "Địa chỉ";
-            label6.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // inputAddress_customer
-            // 
-            inputAddress_customer.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            inputAddress_customer.Font = new Font("Segoe UI", 12F);
-            inputAddress_customer.Location = new Point(165, 163);
-            inputAddress_customer.Name = "inputAddress_customer";
-            inputAddress_customer.Size = new Size(284, 29);
-            inputAddress_customer.TabIndex = 9;
-            // 
             // inputYob_customer
             // 
+            inputYob_customer.DropDownStyle = ComboBoxStyle.DropDownList;
             inputYob_customer.Font = new Font("Segoe UI", 12F);
             inputYob_customer.FormattingEnabled = true;
+            inputYob_customer.Items.AddRange(new object[] { "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007", "2006", "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950" });
             inputYob_customer.Location = new Point(165, 83);
             inputYob_customer.Name = "inputYob_customer";
             inputYob_customer.Size = new Size(284, 29);

@@ -227,8 +227,10 @@
             // 
             // inputYob_hdv
             // 
+            inputYob_hdv.DropDownStyle = ComboBoxStyle.DropDownList;
             inputYob_hdv.Font = new Font("Segoe UI", 12F);
             inputYob_hdv.FormattingEnabled = true;
+            inputYob_hdv.Items.AddRange(new object[] { "2005", "2004", "2003", "2002", "2001", "2000", "1999", "1998", "1997", "1996", "1995", "1994", "1993", "1992", "1991", "1990", "1989", "1988", "1987", "1986", "1985", "1984", "1983", "1982", "1981", "1980", "1979", "1978", "1977", "1976", "1975", "1974", "1973", "1972", "1971", "1970", "1969", "1968", "1967", "1966", "1965", "1964", "1963", "1962", "1961", "1960", "1959", "1958", "1957", "1956", "1955", "1954", "1953", "1952", "1951", "1950" });
             inputYob_hdv.Location = new Point(138, 83);
             inputYob_hdv.Name = "inputYob_hdv";
             inputYob_hdv.Size = new Size(311, 29);

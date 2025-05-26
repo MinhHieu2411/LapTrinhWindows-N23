@@ -40,7 +40,7 @@
             label8 = new Label();
             label9 = new Label();
             inputID_tour = new TextBox();
-            txtRevenue_tour = new TextBox();
+            inputRevenue_tour = new TextBox();
             inputCus_tour = new ComboBox();
             inputHdv_tour = new ComboBox();
             inputVehicle_tour = new ComboBox();
@@ -68,7 +68,7 @@
             tableLayoutPanel1.Controls.Add(label8, 0, 6);
             tableLayoutPanel1.Controls.Add(label9, 0, 7);
             tableLayoutPanel1.Controls.Add(inputID_tour, 1, 0);
-            tableLayoutPanel1.Controls.Add(txtRevenue_tour, 1, 7);
+            tableLayoutPanel1.Controls.Add(inputRevenue_tour, 1, 7);
             tableLayoutPanel1.Controls.Add(inputCus_tour, 1, 4);
             tableLayoutPanel1.Controls.Add(inputHdv_tour, 1, 5);
             tableLayoutPanel1.Controls.Add(inputVehicle_tour, 1, 6);
@@ -91,24 +91,28 @@
             // inputDuration_tour
             // 
             inputDuration_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputDuration_tour.DropDownStyle = ComboBoxStyle.DropDownList;
             inputDuration_tour.Font = new Font("Segoe UI", 12F);
             inputDuration_tour.FormattingEnabled = true;
-            inputDuration_tour.Items.AddRange(new object[] { "...", "1", "2", "3", "4", "5", "6", "7" });
+            inputDuration_tour.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7" });
             inputDuration_tour.Location = new Point(165, 83);
             inputDuration_tour.Name = "inputDuration_tour";
             inputDuration_tour.Size = new Size(284, 29);
             inputDuration_tour.TabIndex = 19;
+            inputDuration_tour.TextChanged += inputCN_tour_TextChanged;
             // 
             // inputCN_tour
             // 
             inputCN_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputCN_tour.DropDownStyle = ComboBoxStyle.DropDownList;
             inputCN_tour.Font = new Font("Segoe UI", 12F);
             inputCN_tour.FormattingEnabled = true;
-            inputCN_tour.Items.AddRange(new object[] { "", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            inputCN_tour.Items.AddRange(new object[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26" });
             inputCN_tour.Location = new Point(165, 123);
             inputCN_tour.Name = "inputCN_tour";
             inputCN_tour.Size = new Size(284, 29);
             inputCN_tour.TabIndex = 18;
+            inputCN_tour.TextChanged += inputCN_tour_TextChanged;
             // 
             // label1
             // 
@@ -215,19 +219,21 @@
             inputID_tour.Size = new Size(284, 29);
             inputID_tour.TabIndex = 9;
             // 
-            // txtRevenue_tour
+            // inputRevenue_tour
             // 
-            txtRevenue_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtRevenue_tour.Enabled = false;
-            txtRevenue_tour.Font = new Font("Segoe UI", 12F);
-            txtRevenue_tour.Location = new Point(165, 283);
-            txtRevenue_tour.Name = "txtRevenue_tour";
-            txtRevenue_tour.Size = new Size(284, 29);
-            txtRevenue_tour.TabIndex = 13;
+            inputRevenue_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputRevenue_tour.Enabled = false;
+            inputRevenue_tour.Font = new Font("Segoe UI", 12F);
+            inputRevenue_tour.Location = new Point(165, 283);
+            inputRevenue_tour.Name = "inputRevenue_tour";
+            inputRevenue_tour.ReadOnly = true;
+            inputRevenue_tour.Size = new Size(284, 29);
+            inputRevenue_tour.TabIndex = 13;
             // 
             // inputCus_tour
             // 
             inputCus_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputCus_tour.DropDownStyle = ComboBoxStyle.DropDownList;
             inputCus_tour.Font = new Font("Segoe UI", 12F);
             inputCus_tour.FormattingEnabled = true;
             inputCus_tour.Location = new Point(165, 163);
@@ -238,6 +244,7 @@
             // inputHdv_tour
             // 
             inputHdv_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputHdv_tour.DropDownStyle = ComboBoxStyle.DropDownList;
             inputHdv_tour.Font = new Font("Segoe UI", 12F);
             inputHdv_tour.FormattingEnabled = true;
             inputHdv_tour.Location = new Point(165, 203);
@@ -248,6 +255,7 @@
             // inputVehicle_tour
             // 
             inputVehicle_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputVehicle_tour.DropDownStyle = ComboBoxStyle.DropDownList;
             inputVehicle_tour.Font = new Font("Segoe UI", 12F);
             inputVehicle_tour.FormattingEnabled = true;
             inputVehicle_tour.Location = new Point(165, 243);
@@ -274,6 +282,7 @@
             button1.TabIndex = 1;
             button1.Text = "Xác nhận";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -285,6 +294,7 @@
             button2.TabIndex = 2;
             button2.Text = "Hủy bỏ";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label4
             // 
@@ -310,6 +320,7 @@
             Name = "formNhapTour";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Thông tin Tour";
+            Load += formNhapTour_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
@@ -331,7 +342,7 @@
         private Button button2;
         private TextBox inputID_tour;
         private TextBox input;
-        private TextBox txtRevenue_tour;
+        private TextBox inputRevenue_tour;
         private DateTimePicker inputStart_tour;
         private Label label4;
         private ComboBox inputCus_tour;
