@@ -32,7 +32,35 @@ namespace btln21
 
         private void btnAddTour_Click(object sender, EventArgs e)
         {
+            formNhapTour formNhap = new formNhapTour();
+            formNhap.ShowDialog();
+        }
 
+        private void Home_Load(object sender, EventArgs e)
+        {
+            getHDV();
+            getVehicle();
+        }
+        private void getHDV()
+        {
+            string query = "Select * from TourGuide";
+            DataTable dt = DatabaseHelper.ExecuteQuery(query);
+            dgvHDV.Rows.Clear();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                dgvHDV.Rows.Add(row["TourGuideID"], row["Name"], row["YearOfBirth"], row["Phone"], row["Address"], row["Works"], row["Salary"]);
+            }
+        }
+        private void getVehicle()
+        {
+            string query = "Select * from Vehicle";
+            DataTable dt = DatabaseHelper.ExecuteQuery(query);
+            dgvVehicles.Rows.Clear();
+            foreach(DataRow row in dt.Rows)
+            {
+                dgvVehicles.Rows.Add(row["VehicleID"], row["Description"], row["LisencePlate"], row["Capability"]);
+            }
         }
     }
 }

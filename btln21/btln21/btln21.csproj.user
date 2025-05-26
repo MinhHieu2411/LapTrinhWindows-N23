@@ -4,6 +4,9 @@
     <Compile Update="formNhapHDV.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formNhapKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formNhapTour.cs">
       <SubType>Form</SubType>
     </Compile>

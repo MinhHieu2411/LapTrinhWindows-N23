@@ -33,7 +33,6 @@
             inputYears_hdv = new TextBox();
             inputAddress_hdv = new TextBox();
             inputPhone_hdv = new TextBox();
-            inputYob_hdv = new TextBox();
             inputName_hdv = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -43,6 +42,7 @@
             label6 = new Label();
             inputID_hdv = new TextBox();
             label7 = new Label();
+            inputYob_hdv = new ComboBox();
             label8 = new Label();
             btnConfirm = new Button();
             btnCancel = new Button();
@@ -60,7 +60,6 @@
             tableLayoutPanel1.Controls.Add(inputYears_hdv, 1, 5);
             tableLayoutPanel1.Controls.Add(inputAddress_hdv, 1, 4);
             tableLayoutPanel1.Controls.Add(inputPhone_hdv, 1, 3);
-            tableLayoutPanel1.Controls.Add(inputYob_hdv, 1, 2);
             tableLayoutPanel1.Controls.Add(inputName_hdv, 1, 1);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
@@ -70,6 +69,7 @@
             tableLayoutPanel1.Controls.Add(label6, 0, 5);
             tableLayoutPanel1.Controls.Add(inputID_hdv, 1, 0);
             tableLayoutPanel1.Controls.Add(label7, 0, 6);
+            tableLayoutPanel1.Controls.Add(inputYob_hdv, 1, 2);
             tableLayoutPanel1.Location = new Point(0, 108);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 7;
@@ -89,6 +89,7 @@
             inputSalary_hdv.Font = new Font("Segoe UI", 12F);
             inputSalary_hdv.Location = new Point(138, 243);
             inputSalary_hdv.Name = "inputSalary_hdv";
+            inputSalary_hdv.ReadOnly = true;
             inputSalary_hdv.Size = new Size(311, 29);
             inputSalary_hdv.TabIndex = 13;
             // 
@@ -100,6 +101,8 @@
             inputYears_hdv.Name = "inputYears_hdv";
             inputYears_hdv.Size = new Size(311, 29);
             inputYears_hdv.TabIndex = 12;
+            inputYears_hdv.TextChanged += inputYears_hdv_TextChanged;
+            inputYears_hdv.KeyPress += inputYears_hdv_KeyPress;
             // 
             // inputAddress_hdv
             // 
@@ -118,15 +121,7 @@
             inputPhone_hdv.Name = "inputPhone_hdv";
             inputPhone_hdv.Size = new Size(311, 29);
             inputPhone_hdv.TabIndex = 10;
-            // 
-            // inputYob_hdv
-            // 
-            inputYob_hdv.Dock = DockStyle.Fill;
-            inputYob_hdv.Font = new Font("Segoe UI", 12F);
-            inputYob_hdv.Location = new Point(138, 83);
-            inputYob_hdv.Name = "inputYob_hdv";
-            inputYob_hdv.Size = new Size(311, 29);
-            inputYob_hdv.TabIndex = 9;
+            inputPhone_hdv.KeyPress += inputYears_hdv_KeyPress;
             // 
             // inputName_hdv
             // 
@@ -230,6 +225,15 @@
             label7.Text = "Lương cơ bản";
             label7.TextAlign = ContentAlignment.TopCenter;
             // 
+            // inputYob_hdv
+            // 
+            inputYob_hdv.Font = new Font("Segoe UI", 12F);
+            inputYob_hdv.FormattingEnabled = true;
+            inputYob_hdv.Location = new Point(138, 83);
+            inputYob_hdv.Name = "inputYob_hdv";
+            inputYob_hdv.Size = new Size(311, 29);
+            inputYob_hdv.TabIndex = 14;
+            // 
             // label8
             // 
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -252,6 +256,7 @@
             btnConfirm.TabIndex = 2;
             btnConfirm.Text = "Xác nhận";
             btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // btnCancel
             // 
@@ -287,6 +292,7 @@
             Controls.Add(label8);
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapHDV";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Thông tin Hướng dẫn viên";
             Load += formNhapHDV_Load;
             tableLayoutPanel1.ResumeLayout(false);
@@ -309,12 +315,12 @@
         private TextBox inputYears_hdv;
         private TextBox inputAddress_hdv;
         private TextBox inputPhone_hdv;
-        private TextBox inputYob_hdv;
-        private TextBox inputName_hdv;
         private TextBox inputID_hdv;
         private Label label8;
         private Button btnConfirm;
         private Button btnCancel;
         private Label lbNhapHdv;
+        private TextBox inputName_hdv;
+        private ComboBox inputYob_hdv;
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
+            inputDuration_tour = new ComboBox();
+            inputCN_tour = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -37,13 +39,15 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
+            inputID_tour = new TextBox();
+            txtRevenue_tour = new TextBox();
+            inputCus_tour = new ComboBox();
+            inputHdv_tour = new ComboBox();
+            inputVehicle_tour = new ComboBox();
+            inputStart_tour = new DateTimePicker();
             button1 = new Button();
             button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            label4 = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,6 +57,8 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 36F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 64F));
+            tableLayoutPanel1.Controls.Add(inputDuration_tour, 1, 2);
+            tableLayoutPanel1.Controls.Add(inputCN_tour, 1, 3);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
             tableLayoutPanel1.Controls.Add(label3, 0, 2);
@@ -61,11 +67,12 @@
             tableLayoutPanel1.Controls.Add(label7, 0, 5);
             tableLayoutPanel1.Controls.Add(label8, 0, 6);
             tableLayoutPanel1.Controls.Add(label9, 0, 7);
-            tableLayoutPanel1.Controls.Add(textBox1, 1, 0);
-            tableLayoutPanel1.Controls.Add(textBox2, 1, 2);
-            tableLayoutPanel1.Controls.Add(textBox4, 1, 3);
-            tableLayoutPanel1.Controls.Add(textBox3, 1, 7);
-            tableLayoutPanel1.Controls.Add(dateTimePicker1, 1, 1);
+            tableLayoutPanel1.Controls.Add(inputID_tour, 1, 0);
+            tableLayoutPanel1.Controls.Add(txtRevenue_tour, 1, 7);
+            tableLayoutPanel1.Controls.Add(inputCus_tour, 1, 4);
+            tableLayoutPanel1.Controls.Add(inputHdv_tour, 1, 5);
+            tableLayoutPanel1.Controls.Add(inputVehicle_tour, 1, 6);
+            tableLayoutPanel1.Controls.Add(inputStart_tour, 1, 1);
             tableLayoutPanel1.Location = new Point(0, 108);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 8;
@@ -80,6 +87,28 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(452, 321);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // inputDuration_tour
+            // 
+            inputDuration_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputDuration_tour.Font = new Font("Segoe UI", 12F);
+            inputDuration_tour.FormattingEnabled = true;
+            inputDuration_tour.Items.AddRange(new object[] { "...", "1", "2", "3", "4", "5", "6", "7" });
+            inputDuration_tour.Location = new Point(165, 83);
+            inputDuration_tour.Name = "inputDuration_tour";
+            inputDuration_tour.Size = new Size(284, 29);
+            inputDuration_tour.TabIndex = 19;
+            // 
+            // inputCN_tour
+            // 
+            inputCN_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputCN_tour.Font = new Font("Segoe UI", 12F);
+            inputCN_tour.FormattingEnabled = true;
+            inputCN_tour.Items.AddRange(new object[] { "", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            inputCN_tour.Location = new Point(165, 123);
+            inputCN_tour.Name = "inputCN_tour";
+            inputCN_tour.Size = new Size(284, 29);
+            inputCN_tour.TabIndex = 18;
             // 
             // label1
             // 
@@ -177,6 +206,63 @@
             label9.Text = "Doanh thu";
             label9.TextAlign = ContentAlignment.TopCenter;
             // 
+            // inputID_tour
+            // 
+            inputID_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputID_tour.Font = new Font("Segoe UI", 12F);
+            inputID_tour.Location = new Point(165, 3);
+            inputID_tour.Name = "inputID_tour";
+            inputID_tour.Size = new Size(284, 29);
+            inputID_tour.TabIndex = 9;
+            // 
+            // txtRevenue_tour
+            // 
+            txtRevenue_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtRevenue_tour.Enabled = false;
+            txtRevenue_tour.Font = new Font("Segoe UI", 12F);
+            txtRevenue_tour.Location = new Point(165, 283);
+            txtRevenue_tour.Name = "txtRevenue_tour";
+            txtRevenue_tour.Size = new Size(284, 29);
+            txtRevenue_tour.TabIndex = 13;
+            // 
+            // inputCus_tour
+            // 
+            inputCus_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputCus_tour.Font = new Font("Segoe UI", 12F);
+            inputCus_tour.FormattingEnabled = true;
+            inputCus_tour.Location = new Point(165, 163);
+            inputCus_tour.Name = "inputCus_tour";
+            inputCus_tour.Size = new Size(284, 29);
+            inputCus_tour.TabIndex = 15;
+            // 
+            // inputHdv_tour
+            // 
+            inputHdv_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputHdv_tour.Font = new Font("Segoe UI", 12F);
+            inputHdv_tour.FormattingEnabled = true;
+            inputHdv_tour.Location = new Point(165, 203);
+            inputHdv_tour.Name = "inputHdv_tour";
+            inputHdv_tour.Size = new Size(284, 29);
+            inputHdv_tour.TabIndex = 16;
+            // 
+            // inputVehicle_tour
+            // 
+            inputVehicle_tour.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputVehicle_tour.Font = new Font("Segoe UI", 12F);
+            inputVehicle_tour.FormattingEnabled = true;
+            inputVehicle_tour.Location = new Point(165, 243);
+            inputVehicle_tour.Name = "inputVehicle_tour";
+            inputVehicle_tour.Size = new Size(284, 29);
+            inputVehicle_tour.TabIndex = 17;
+            // 
+            // inputStart_tour
+            // 
+            inputStart_tour.CalendarFont = new Font("Segoe UI", 12F);
+            inputStart_tour.Location = new Point(165, 43);
+            inputStart_tour.Name = "inputStart_tour";
+            inputStart_tour.Size = new Size(284, 23);
+            inputStart_tour.TabIndex = 14;
+            // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -200,44 +286,16 @@
             button2.Text = "Hủy bỏ";
             button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // label4
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(165, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(284, 23);
-            textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(165, 83);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(284, 23);
-            textBox2.TabIndex = 10;
-            // 
-            // textBox4
-            // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(165, 123);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(284, 23);
-            textBox4.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox3.Location = new Point(165, 283);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(284, 23);
-            textBox3.TabIndex = 13;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(165, 43);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(284, 23);
-            dateTimePicker1.TabIndex = 14;
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(123, 35);
+            label4.Name = "label4";
+            label4.Size = new Size(233, 30);
+            label4.TabIndex = 3;
+            label4.Text = "Thông tin Tour du lịch";
             // 
             // formNhapTour
             // 
@@ -245,14 +303,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Linen;
             ClientSize = new Size(464, 641);
+            Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapTour";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Thông tin Tour";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -268,10 +329,15 @@
         private Label label9;
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
+        private TextBox inputID_tour;
+        private TextBox input;
+        private TextBox txtRevenue_tour;
+        private DateTimePicker inputStart_tour;
+        private Label label4;
+        private ComboBox inputCus_tour;
+        private ComboBox inputHdv_tour;
+        private ComboBox inputVehicle_tour;
+        private ComboBox inputCN_tour;
+        private ComboBox inputDuration_tour;
     }
 }

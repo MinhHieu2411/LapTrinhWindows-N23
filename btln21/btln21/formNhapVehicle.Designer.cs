@@ -70,22 +70,25 @@
             // inputCap_vehicle
             // 
             inputCap_vehicle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputCap_vehicle.Font = new Font("Segoe UI", 12F);
             inputCap_vehicle.Location = new Point(165, 283);
             inputCap_vehicle.Name = "inputCap_vehicle";
-            inputCap_vehicle.Size = new Size(284, 23);
+            inputCap_vehicle.Size = new Size(284, 29);
             inputCap_vehicle.TabIndex = 7;
             // 
             // inputLP_vehicle
             // 
             inputLP_vehicle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputLP_vehicle.Font = new Font("Segoe UI", 12F);
             inputLP_vehicle.Location = new Point(165, 243);
             inputLP_vehicle.Name = "inputLP_vehicle";
-            inputLP_vehicle.Size = new Size(284, 23);
+            inputLP_vehicle.Size = new Size(284, 29);
             inputLP_vehicle.TabIndex = 6;
             // 
             // inputDes_vehicle
             // 
             inputDes_vehicle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputDes_vehicle.Font = new Font("Segoe UI", 12F);
             inputDes_vehicle.Location = new Point(165, 43);
             inputDes_vehicle.Multiline = true;
             inputDes_vehicle.Name = "inputDes_vehicle";
@@ -143,9 +146,10 @@
             // inputID_vehicle
             // 
             inputID_vehicle.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            inputID_vehicle.Font = new Font("Segoe UI", 12F);
             inputID_vehicle.Location = new Point(165, 3);
             inputID_vehicle.Name = "inputID_vehicle";
-            inputID_vehicle.Size = new Size(284, 23);
+            inputID_vehicle.Size = new Size(284, 29);
             inputID_vehicle.TabIndex = 4;
             // 
             // label1
@@ -194,6 +198,7 @@
             Controls.Add(label1);
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapVehicle";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Thông tin phương tiện";
             Load += formNhapVehicle_Load;
             tableLayoutPanel1.ResumeLayout(false);
