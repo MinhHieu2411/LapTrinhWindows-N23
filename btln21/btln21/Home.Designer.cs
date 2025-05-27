@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             tpCustomer = new TabPage();
+            label7 = new Label();
             label4 = new Label();
             tableLayoutPanel4 = new TableLayoutPanel();
             btnDeleteCustomer = new Button();
@@ -41,6 +42,7 @@
             customer_phone = new DataGridViewTextBoxColumn();
             customer_address = new DataGridViewTextBoxColumn();
             tpTours = new TabPage();
+            label6 = new Label();
             label3 = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
             btnDeleteTour = new Button();
@@ -57,6 +59,7 @@
             tour_Revenue = new DataGridViewTextBoxColumn();
             tour_Status = new DataGridViewTextBoxColumn();
             tpVehicle = new TabPage();
+            label5 = new Label();
             label2 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
             btnDeleteVehicle = new Button();
@@ -86,9 +89,6 @@
             button4 = new Button();
             button1 = new Button();
             tabControl1 = new TabControl();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
             tpCustomer.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
@@ -118,6 +118,17 @@
             tpCustomer.Size = new Size(1257, 650);
             tpCustomer.TabIndex = 4;
             tpCustomer.Text = "Khách hàng";
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16F);
+            label7.Location = new Point(531, 3);
+            label7.Name = "label7";
+            label7.Size = new Size(203, 30);
+            label7.TabIndex = 5;
+            label7.Text = "Quản lý khách hàng";
             // 
             // label4
             // 
@@ -239,6 +250,17 @@
             tpTours.TabIndex = 3;
             tpTours.Text = "Tours";
             // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F);
+            label6.Location = new Point(556, 3);
+            label6.Name = "label6";
+            label6.Size = new Size(136, 30);
+            label6.TabIndex = 5;
+            label6.Text = "Quản lý Tour";
+            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -275,6 +297,7 @@
             btnDeleteTour.TabIndex = 2;
             btnDeleteTour.Text = "Xóa";
             btnDeleteTour.UseVisualStyleBackColor = false;
+            btnDeleteTour.Click += btnDeleteTour_Click;
             // 
             // btnEditTour
             // 
@@ -375,6 +398,17 @@
             tpVehicle.Size = new Size(1257, 650);
             tpVehicle.TabIndex = 2;
             tpVehicle.Text = "Phương tiện";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F);
+            label5.Location = new Point(524, 3);
+            label5.Name = "label5";
+            label5.Size = new Size(211, 30);
+            label5.TabIndex = 4;
+            label5.Text = "Quản lý phương tiện";
             // 
             // label2
             // 
@@ -668,39 +702,6 @@
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(1265, 683);
             tabControl1.TabIndex = 0;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(524, 3);
-            label5.Name = "label5";
-            label5.Size = new Size(211, 30);
-            label5.TabIndex = 4;
-            label5.Text = "Quản lý phương tiện";
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 16F);
-            label6.Location = new Point(556, 3);
-            label6.Name = "label6";
-            label6.Size = new Size(136, 30);
-            label6.TabIndex = 5;
-            label6.Text = "Quản lý Tour";
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 16F);
-            label7.Location = new Point(531, 3);
-            label7.Name = "label7";
-            label7.Size = new Size(203, 30);
-            label7.TabIndex = 5;
-            label7.Text = "Quản lý khách hàng";
             // 
             // Home
             // 

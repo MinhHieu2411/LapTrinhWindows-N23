@@ -99,7 +99,7 @@
             inputDuration_tour.Name = "inputDuration_tour";
             inputDuration_tour.Size = new Size(284, 29);
             inputDuration_tour.TabIndex = 19;
-            inputDuration_tour.TextChanged += inputCN_tour_TextChanged;
+            inputDuration_tour.TextChanged += inputDuration_tour_TextChanged;
             // 
             // inputCN_tour
             // 
