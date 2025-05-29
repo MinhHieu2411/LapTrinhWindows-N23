@@ -226,7 +226,7 @@
             Controls.Add(label1);
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapKH";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Thông tin khách hàng";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

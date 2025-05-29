@@ -318,7 +318,7 @@
             Controls.Add(button1);
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapTour";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Thông tin Tour";
             Load += formNhapTour_Load;
             tableLayoutPanel1.ResumeLayout(false);

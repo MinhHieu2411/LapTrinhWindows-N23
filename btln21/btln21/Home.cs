@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -368,6 +369,73 @@ namespace btln21
             }
         }
 
-        
+        //tìm kiếm theo sự thay đổi của textbox search
+        private void txtSearchHdv_TextChanged(object sender, EventArgs e)
+        {
+            find(dgvHDV, txtSearchHdv);
+        }
+
+        private void txtSearchVehicle_TextChanged(object sender, EventArgs e)
+        {
+            find(dgvVehicles, txtSearchVehicle);
+        }
+        private void txtSearchTour_TextChanged(object sender, EventArgs e)
+        {
+            find(dgvTours, txtSearchTour);
+        }
+
+        private void txtSearchCustomer_TextChanged(object sender, EventArgs e)
+        {
+            find(dgvCustomers, txtSearchCustomer);
+        }
+        //hàm tìm
+        private void find(DataGridView dgv, TextBox txtfind)
+        {
+            string f = txtfind.Text.Trim().ToLower();
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+
+                if (row.IsNewRow) continue;
+                bool visible = false;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value.ToString().ToLower().Contains(f))
+                    {
+                        visible = true;
+                        break;
+                    }
+                }
+                row.Visible = visible;
+            }
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddAdmin_Click(object sender, EventArgs e)
+        {
+            formNhapAdmin formNhap = new formNhapAdmin();
+            formNhap.ShowDialog();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Bạn sắp đăng xuất", "Thông báo", MessageBoxButtons.OKCancel);
+
+            if(dialog == DialogResult.OK)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

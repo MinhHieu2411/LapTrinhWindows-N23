@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("btln21")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96edf537ea65ba769db6854294dd06ffffcbb226")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd68f748b1f76f317b613dea58bb2ecdb827c83e")]
 [assembly: System.Reflection.AssemblyProductAttribute("btln21")]
 [assembly: System.Reflection.AssemblyTitleAttribute("btln21")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

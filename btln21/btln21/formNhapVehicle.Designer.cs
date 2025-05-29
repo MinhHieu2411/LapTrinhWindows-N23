@@ -201,7 +201,7 @@
             Controls.Add(label1);
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapVehicle";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Thông tin phương tiện";
             Load += formNhapVehicle_Load;
             tableLayoutPanel1.ResumeLayout(false);

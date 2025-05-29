@@ -64,6 +64,19 @@ namespace btln21
 
 
         //them hdv vao database-----------------------------------------------------------------------------------------------------------------------------------
+        
+        public static bool AddAdmin(string username, string password)
+        {
+            string query = "INSERT INTO Admin VALUES (@username, @password)";
+            using (SqlConnection con = GetConnection())
+            using (SqlCommand cmd = new SqlCommand( query, con))
+            {
+                cmd.Parameters.AddWithValue("username", username);
+                cmd.Parameters.AddWithValue("password", password);
+                
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
         public static bool AddTourGuide(string id, string name, int year, string phone, string address, string works, decimal salary)
         {
             string query = "INSERT INTO TourGuide VALUES (@id, @name, @year, @phone, @address, @works, @salary)";

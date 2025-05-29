@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             tpCustomer = new TabPage();
+            label11 = new Label();
+            txtSearchCustomer = new TextBox();
             label7 = new Label();
             label4 = new Label();
             tableLayoutPanel4 = new TableLayoutPanel();
@@ -42,6 +44,8 @@
             customer_phone = new DataGridViewTextBoxColumn();
             customer_address = new DataGridViewTextBoxColumn();
             tpTours = new TabPage();
+            label10 = new Label();
+            txtSearchTour = new TextBox();
             label6 = new Label();
             label3 = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -59,6 +63,8 @@
             tour_Revenue = new DataGridViewTextBoxColumn();
             tour_Status = new DataGridViewTextBoxColumn();
             tpVehicle = new TabPage();
+            label9 = new Label();
+            txtSearchVehicle = new TextBox();
             label5 = new Label();
             label2 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -71,6 +77,8 @@
             vehicle_lp = new DataGridViewTextBoxColumn();
             vehicle_cap = new DataGridViewTextBoxColumn();
             tpHDV = new TabPage();
+            label8 = new Label();
+            txtSearchHdv = new TextBox();
             lTB_Hdv = new Label();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -86,8 +94,9 @@
             hdv_works = new DataGridViewTextBoxColumn();
             hdv_salary = new DataGridViewTextBoxColumn();
             tpHome = new TabPage();
-            button4 = new Button();
-            button1 = new Button();
+            btnAddAdmin = new Button();
+            btnLogOut = new Button();
+            btnChangePassword = new Button();
             tabControl1 = new TabControl();
             tpCustomer.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
@@ -108,6 +117,8 @@
             // tpCustomer
             // 
             tpCustomer.BackColor = Color.Linen;
+            tpCustomer.Controls.Add(label11);
+            tpCustomer.Controls.Add(txtSearchCustomer);
             tpCustomer.Controls.Add(label7);
             tpCustomer.Controls.Add(label4);
             tpCustomer.Controls.Add(tableLayoutPanel4);
@@ -118,6 +129,23 @@
             tpCustomer.Size = new Size(1257, 650);
             tpCustomer.TabIndex = 4;
             tpCustomer.Text = "Khách hàng";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(856, 111);
+            label11.Name = "label11";
+            label11.Size = new Size(74, 20);
+            label11.TabIndex = 11;
+            label11.Text = "Tìm kiếm";
+            // 
+            // txtSearchCustomer
+            // 
+            txtSearchCustomer.Location = new Point(936, 108);
+            txtSearchCustomer.Name = "txtSearchCustomer";
+            txtSearchCustomer.Size = new Size(315, 27);
+            txtSearchCustomer.TabIndex = 10;
+            txtSearchCustomer.TextChanged += txtSearchCustomer_TextChanged;
             // 
             // label7
             // 
@@ -241,6 +269,8 @@
             // tpTours
             // 
             tpTours.BackColor = Color.Linen;
+            tpTours.Controls.Add(label10);
+            tpTours.Controls.Add(txtSearchTour);
             tpTours.Controls.Add(label6);
             tpTours.Controls.Add(label3);
             tpTours.Controls.Add(tableLayoutPanel3);
@@ -251,6 +281,23 @@
             tpTours.Size = new Size(1257, 650);
             tpTours.TabIndex = 3;
             tpTours.Text = "Tours";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(856, 110);
+            label10.Name = "label10";
+            label10.Size = new Size(74, 20);
+            label10.TabIndex = 9;
+            label10.Text = "Tìm kiếm";
+            // 
+            // txtSearchTour
+            // 
+            txtSearchTour.Location = new Point(936, 107);
+            txtSearchTour.Name = "txtSearchTour";
+            txtSearchTour.Size = new Size(315, 27);
+            txtSearchTour.TabIndex = 8;
+            txtSearchTour.TextChanged += txtSearchTour_TextChanged;
             // 
             // label6
             // 
@@ -391,6 +438,8 @@
             // tpVehicle
             // 
             tpVehicle.BackColor = Color.Linen;
+            tpVehicle.Controls.Add(label9);
+            tpVehicle.Controls.Add(txtSearchVehicle);
             tpVehicle.Controls.Add(label5);
             tpVehicle.Controls.Add(label2);
             tpVehicle.Controls.Add(tableLayoutPanel2);
@@ -401,6 +450,23 @@
             tpVehicle.Size = new Size(1257, 650);
             tpVehicle.TabIndex = 2;
             tpVehicle.Text = "Phương tiện";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(856, 109);
+            label9.Name = "label9";
+            label9.Size = new Size(74, 20);
+            label9.TabIndex = 7;
+            label9.Text = "Tìm kiếm";
+            // 
+            // txtSearchVehicle
+            // 
+            txtSearchVehicle.Location = new Point(936, 106);
+            txtSearchVehicle.Name = "txtSearchVehicle";
+            txtSearchVehicle.Size = new Size(315, 27);
+            txtSearchVehicle.TabIndex = 6;
+            txtSearchVehicle.TextChanged += txtSearchVehicle_TextChanged;
             // 
             // label5
             // 
@@ -517,6 +583,8 @@
             // tpHDV
             // 
             tpHDV.BackColor = Color.Linen;
+            tpHDV.Controls.Add(label8);
+            tpHDV.Controls.Add(txtSearchHdv);
             tpHDV.Controls.Add(lTB_Hdv);
             tpHDV.Controls.Add(label1);
             tpHDV.Controls.Add(tableLayoutPanel1);
@@ -527,6 +595,23 @@
             tpHDV.Size = new Size(1257, 650);
             tpHDV.TabIndex = 1;
             tpHDV.Text = "Hướng dẫn viên";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(856, 111);
+            label8.Name = "label8";
+            label8.Size = new Size(74, 20);
+            label8.TabIndex = 5;
+            label8.Text = "Tìm kiếm";
+            // 
+            // txtSearchHdv
+            // 
+            txtSearchHdv.Location = new Point(936, 108);
+            txtSearchHdv.Name = "txtSearchHdv";
+            txtSearchHdv.Size = new Size(315, 27);
+            txtSearchHdv.TabIndex = 4;
+            txtSearchHdv.TextChanged += txtSearchHdv_TextChanged;
             // 
             // lTB_Hdv
             // 
@@ -662,8 +747,9 @@
             // tpHome
             // 
             tpHome.BackColor = Color.Linen;
-            tpHome.Controls.Add(button4);
-            tpHome.Controls.Add(button1);
+            tpHome.Controls.Add(btnAddAdmin);
+            tpHome.Controls.Add(btnLogOut);
+            tpHome.Controls.Add(btnChangePassword);
             tpHome.Location = new Point(4, 29);
             tpHome.Name = "tpHome";
             tpHome.Padding = new Padding(3);
@@ -671,27 +757,41 @@
             tpHome.TabIndex = 0;
             tpHome.Text = "Trang chủ";
             // 
-            // button4
+            // btnAddAdmin
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button4.BackColor = Color.DarkGray;
-            button4.Location = new Point(359, 401);
-            button4.Name = "button4";
-            button4.Size = new Size(454, 63);
-            button4.TabIndex = 1;
-            button4.Text = "Đăng xuất";
-            button4.UseVisualStyleBackColor = false;
+            btnAddAdmin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnAddAdmin.BackColor = Color.LightGray;
+            btnAddAdmin.Location = new Point(359, 307);
+            btnAddAdmin.Name = "btnAddAdmin";
+            btnAddAdmin.Size = new Size(454, 63);
+            btnAddAdmin.TabIndex = 2;
+            btnAddAdmin.Text = "Thêm quản trị viên";
+            btnAddAdmin.UseVisualStyleBackColor = false;
+            btnAddAdmin.Click += btnAddAdmin_Click;
             // 
-            // button1
+            // btnLogOut
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            button1.BackColor = Color.DeepSkyBlue;
-            button1.Location = new Point(359, 299);
-            button1.Name = "button1";
-            button1.Size = new Size(454, 63);
-            button1.TabIndex = 0;
-            button1.Text = "Đổi mật khảu";
-            button1.UseVisualStyleBackColor = false;
+            btnLogOut.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnLogOut.BackColor = Color.DarkGray;
+            btnLogOut.Location = new Point(359, 401);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(454, 63);
+            btnLogOut.TabIndex = 1;
+            btnLogOut.Text = "Đăng xuất";
+            btnLogOut.UseVisualStyleBackColor = false;
+            btnLogOut.Click += btnLogOut_Click;
+            // 
+            // btnChangePassword
+            // 
+            btnChangePassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnChangePassword.BackColor = Color.DeepSkyBlue;
+            btnChangePassword.Location = new Point(359, 215);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(454, 63);
+            btnChangePassword.TabIndex = 0;
+            btnChangePassword.Text = "Đổi mật khảu";
+            btnChangePassword.UseVisualStyleBackColor = false;
+            btnChangePassword.Click += btnChangePassword_Click;
             // 
             // tabControl1
             // 
@@ -785,8 +885,8 @@
         private DataGridViewTextBoxColumn hdv_works;
         private DataGridViewTextBoxColumn hdv_salary;
         private TabPage tpHome;
-        private Button button4;
-        private Button button1;
+        private Button btnLogOut;
+        private Button btnChangePassword;
         private TabControl tabControl1;
         private TableLayoutPanel tableLayoutPanel4;
         private Button btnDeleteCustomer;
@@ -802,5 +902,14 @@
         private Label label6;
         private Label label5;
         private Label label7;
+        private TextBox txtSearchHdv;
+        private Label label8;
+        private Label label9;
+        private TextBox txtSearchVehicle;
+        private Label label10;
+        private TextBox txtSearchTour;
+        private Label label11;
+        private TextBox txtSearchCustomer;
+        private Button btnAddAdmin;
     }
 }

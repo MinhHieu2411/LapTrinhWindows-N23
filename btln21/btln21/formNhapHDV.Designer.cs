@@ -294,7 +294,7 @@
             Controls.Add(label8);
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapHDV";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Thông tin Hướng dẫn viên";
             Load += formNhapHDV_Load;
             tableLayoutPanel1.ResumeLayout(false);
