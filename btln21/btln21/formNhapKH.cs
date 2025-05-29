@@ -73,6 +73,7 @@ namespace btln21
             int yob = Convert.ToInt32(inputYob_customer.Text);
             string phone = inputPhone_customer.Text;
 
+            //nếu là sự kiện sửa
             if (isEdit)
             {
                 string query = @"UPDATE Customer
@@ -99,7 +100,7 @@ namespace btln21
                     }
                 }
             }
-            //su kien them
+            //sự kiện thêm
             else
             {
                 string table = "Customer";

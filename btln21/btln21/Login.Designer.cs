@@ -71,6 +71,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(180, 23);
             textBox2.TabIndex = 3;
+            textBox2.KeyPress += Login_KeyPress;
             // 
             // label3
             // 
@@ -86,10 +87,11 @@
             // btnLogin
             // 
             btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            btnLogin.BackColor = SystemColors.ButtonFace;
+            btnLogin.BackColor = Color.DeepSkyBlue;
+            btnLogin.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnLogin.Location = new Point(95, 162);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(167, 23);
+            btnLogin.Size = new Size(167, 34);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Đăng nhập";
             btnLogin.UseVisualStyleBackColor = false;
@@ -109,8 +111,9 @@
             Controls.Add(label1);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Login";
             Load += Login_Load;
+            KeyPress += Login_KeyPress;
             ResumeLayout(false);
             PerformLayout();
         }

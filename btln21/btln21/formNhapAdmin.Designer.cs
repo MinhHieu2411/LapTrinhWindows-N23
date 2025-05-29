@@ -175,6 +175,7 @@
             Name = "formNhapAdmin";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Đăng kí quản trị viên mới";
+            Load += formNhapAdmin_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);

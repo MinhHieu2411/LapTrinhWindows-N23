@@ -38,6 +38,15 @@
         private void Login_Load(object sender, EventArgs e)
         {
             this.Text = "Đăng nhập";
+            textBox2.UseSystemPasswordChar = true; // Ẩn mật khẩu khi nhập
+        }
+
+        private void Login_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnLogin.PerformClick(); // Gọi sự kiện click của nút đăng nhập khi nhấn Enter
+            }
         }
 
     }

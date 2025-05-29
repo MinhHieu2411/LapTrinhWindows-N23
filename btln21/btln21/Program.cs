@@ -12,7 +12,7 @@
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //nhớ sửa về login :))))))
-            Application.Run(new Home());
+            Application.Run(new Login());
         }
     }
 }

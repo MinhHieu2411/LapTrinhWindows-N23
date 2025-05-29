@@ -65,7 +65,7 @@ namespace btln21
                 inputID_hdv.Enabled = false;
                 inputName_hdv.Enabled = false;
                 inputYob_hdv.Enabled = false;
-                inputPhone_hdv.Enabled = true;
+                inputPhone_hdv.Enabled = false;
                 inputAddress_hdv.Enabled = false;
                 inputYears_hdv.Enabled = false;
 
@@ -75,7 +75,6 @@ namespace btln21
 
         private void formNhapHDV_Load(object sender, EventArgs e)
         {
-            this.Text = "Nhập thông tin hướng dẫn viên";
         }
         //nut xac nhan
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -83,15 +82,47 @@ namespace btln21
 
             string id = inputID_hdv.Text;
             string name = inputName_hdv.Text;
-            int year = int.Parse(inputYob_hdv.Text);
             string phone = inputPhone_hdv.Text;
             string address = inputAddress_hdv.Text;
-            int works = int.Parse(inputYears_hdv.Text);
-            decimal salary = 10000000 + works * 500000;
 
+
+            //su kien them nhu binh thuong
+            if (!isEdit)
+            { 
+                string table = "TourGuide";
+                string collumn = "TourGuideID";
+            
+            //check xem co truong nao nhap sai hoac de trong
+                if (string.IsNullOrEmpty(id) || string.IsNullOrWhiteSpace(inputName_hdv.Text) || string.IsNullOrEmpty(inputAddress_hdv.Text) || !int.TryParse(inputYob_hdv.Text, out int year) || string.IsNullOrEmpty(inputPhone_hdv.Text) || !int.TryParse(inputYears_hdv.Text, out int works))
+                {
+                MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
+                return;
+                }
+                //check lai id neu trung lap (dbhelper)
+                if (DatabaseHelper.checkID(inputID_hdv.Text, table, collumn))
+                {
+                    MessageBox.Show("ID đã tồn tại. Vui lòng chọn ID khác.");
+                    return;
+                }
+                decimal salary = 10000000 + (500000 * works);
+                bool success = DatabaseHelper.AddTourGuide(id, name, year, phone, address, inputYears_hdv.Text.ToString(), salary);
+
+                if (success)
+                {
+                MessageBox.Show("Đã thêm hướng dẫn viên thành công!");
+                    this.Close(); 
+                }
+                else
+                {
+                MessageBox.Show("Lỗi khi thêm vào cơ sở dữ liệu.");
+                }
+            }
             //nếu sự kiện sửa xảy ra
-            if (isEdit)
+            else
             {
+                int year = int.Parse(inputYob_hdv.Text);
+                int works = int.Parse(inputYears_hdv.Text);
+                decimal salary = 10000000 + works * 500000;
                 btnConfirm.Text = "Cập nhật";
                 string query = @"UPDATE TourGuide 
                     SET Name = @name, YearOfBirth = @year, Phone = @phone, Address = @address, Works = @works, Salary = @salary
@@ -119,42 +150,12 @@ namespace btln21
                     }
                 }
             }
-            //su kien them nhu binh thuong
-            else { 
-                string table = "TourGuide";
-                string collumn = "TourGuideID";
-            
-            //check xem co truong nao nhap sai hoac de trong
-                if (string.IsNullOrEmpty(id) || string.IsNullOrWhiteSpace(inputName_hdv.Text))
-                {
-                MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
-                return;
-                }
-                //check lai id neu trung lap (dbhelper)
-                if (DatabaseHelper.checkID(inputID_hdv.Text, table, collumn))
-                {
-                    MessageBox.Show("ID đã tồn tại. Vui lòng chọn ID khác.");
-                    return;
-                }
-
-                bool success = DatabaseHelper.AddTourGuide(id, name, year, phone, address, inputYears_hdv.Text.ToString(), salary);
-
-                if (success)
-                {
-                MessageBox.Show("Đã thêm hướng dẫn viên thành công!");
-                    this.Close(); 
-                }
-                else
-                {
-                MessageBox.Show("Lỗi khi thêm vào cơ sở dữ liệu.");
-                }
-            }
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        //tự động nhập lương dựa trên năm làm việc
         private void inputYears_hdv_TextChanged(object sender, EventArgs e)
         {
             if (int.TryParse(inputYears_hdv.Text, out int year))
@@ -167,7 +168,7 @@ namespace btln21
                 inputSalary_hdv.Text = "";
             }
         }
-        //chan cac ky tu khong phai so khi nhap vao works
+        //chặn các ký tự không phải số trong ô nhập năm làm việc
         private void inputYears_hdv_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);

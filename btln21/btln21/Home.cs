@@ -326,7 +326,7 @@ namespace btln21
         }
 
 
-        //load du lieu
+        //load du lieu------------------------------------------------------------------------------------------------------------------------------------
         private void getHDV()
         {
             string query = "Select * from TourGuide";
@@ -369,7 +369,7 @@ namespace btln21
             }
         }
 
-        //tìm kiếm theo sự thay đổi của textbox search
+        //tìm kiếm theo sự thay đổi của textbox search----------------------------------------------------------------------------------------------------
         private void txtSearchHdv_TextChanged(object sender, EventArgs e)
         {
             find(dgvHDV, txtSearchHdv);
@@ -388,7 +388,7 @@ namespace btln21
         {
             find(dgvCustomers, txtSearchCustomer);
         }
-        //hàm tìm
+        //hàm tìm-----------------------------------------------------------------------------
         private void find(DataGridView dgv, TextBox txtfind)
         {
             string f = txtfind.Text.Trim().ToLower();
@@ -414,13 +414,13 @@ namespace btln21
         {
 
         }
-
+        //them quản trị viên-----------------------------------------------------------------------------------------------------------------------------------
         private void btnAddAdmin_Click(object sender, EventArgs e)
         {
             formNhapAdmin formNhap = new formNhapAdmin();
             formNhap.ShowDialog();
         }
-
+        //đăng xuất----------------------------------------------------------------------------------------------------------------------------------------
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Bạn sắp đăng xuất", "Thông báo", MessageBoxButtons.OKCancel);

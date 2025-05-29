@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|c:\\users\\gigabyte\\desktop\\windows\\laptrinhwindows-n23\\btln21\\btln21\\formnhapadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\formnhapadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|c:\\users\\gigabyte\\desktop\\windows\\laptrinhwindows-n23\\btln21\\btln21\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|c:\\users\\gigabyte\\desktop\\windows\\laptrinhwindows-n23\\btln21\\btln21\\formnhapvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\formnhapvehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|c:\\users\\gigabyte\\desktop\\windows\\laptrinhwindows-n23\\btln21\\btln21\\formnhapkh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\formnhapkh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|c:\\users\\gigabyte\\desktop\\windows\\laptrinhwindows-n23\\btln21\\btln21\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|c:\\users\\gigabyte\\desktop\\windows\\laptrinhwindows-n23\\btln21\\btln21\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8164A142-AD62-48AD-A02C-FFD0217E77A7}|btln21\\btln21.csproj|solutionrelative:btln21\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,76 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "formNhapKH.cs",
-              "DocumentMoniker": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapKH.cs",
-              "RelativeDocumentMoniker": "btln21\\formNhapKH.cs",
-              "ToolTip": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapKH.cs",
-              "RelativeToolTip": "btln21\\formNhapKH.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAIwBMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:42:01.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "btln21\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\DatabaseHelper.cs",
-              "RelativeToolTip": "btln21\\DatabaseHelper.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAvwDwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:27:21.743Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\Login.cs",
-              "RelativeDocumentMoniker": "btln21\\Login.cs",
-              "ToolTip": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\Login.cs",
-              "RelativeToolTip": "btln21\\Login.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T03:57:07.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Home.cs",
-              "DocumentMoniker": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\Home.cs",
-              "RelativeDocumentMoniker": "btln21\\Home.cs",
-              "ToolTip": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\Home.cs",
-              "RelativeToolTip": "btln21\\Home.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAgwJ4BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T11:09:02.695Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "formNhapAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapAdmin.cs",
-              "RelativeDocumentMoniker": "btln21\\formNhapAdmin.cs",
-              "ToolTip": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapAdmin.cs",
-              "RelativeToolTip": "btln21\\formNhapAdmin.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAAXAAAAAAAAAA==",
+              "Title": "formNhapVehicle.cs",
+              "DocumentMoniker": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapVehicle.cs",
+              "RelativeDocumentMoniker": "btln21\\formNhapVehicle.cs",
+              "ToolTip": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapVehicle.cs",
+              "RelativeToolTip": "btln21\\formNhapVehicle.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAmwBMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T04:11:12.429Z",
+              "WhenOpened": "2025-05-29T17:02:43.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formNhapKH.cs",
+              "DocumentMoniker": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapKH.cs",
+              "RelativeDocumentMoniker": "btln21\\formNhapKH.cs",
+              "ToolTip": "C:\\Users\\GIGABYTE\\Desktop\\Windows\\LapTrinhWindows-N23\\btln21\\btln21\\formNhapKH.cs",
+              "RelativeToolTip": "btln21\\formNhapKH.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAwwGYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T16:59:59.513Z",
               "EditorCaption": ""
             }
           ]

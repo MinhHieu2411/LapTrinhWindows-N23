@@ -16,7 +16,7 @@ namespace btln21
         {
             InitializeComponent();
         }
-
+        //nhấn nút xác nhận để thêm quản trị viên mới
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             string username = inputUsername.Text.ToString();
@@ -25,23 +25,23 @@ namespace btln21
 
             string table = "Admin";
             string collumn = "username";
-            if(username == null || password == null || checkpassword == null)
+            if (username == null || password == null || checkpassword == null)
             {
                 MessageBox.Show("Yêu cầu nhập đầy đủ thông tin!");
                 return;
             }
-            if(password != checkpassword)
+            if (password != checkpassword)
             {
                 MessageBox.Show("Mật khẩu xác nhận không khớp, yêu cầu nhập lại", "Thông báo");
                 return;
             }
-            if(DatabaseHelper.checkID(username, table, collumn))
+            if (DatabaseHelper.checkID(username, table, collumn))
             {
                 MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng chọn tên đăng nhập khác!", "Thông báo");
                 return;
             }
             bool success = DatabaseHelper.AddAdmin(username, password);
-            if(success)
+            if (success)
             {
                 MessageBox.Show("Thêm quản trị viên thành công", "Thông báo");
                 this.Close();
@@ -55,6 +55,12 @@ namespace btln21
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void formNhapAdmin_Load(object sender, EventArgs e)
+        {
+            inputPassword.UseSystemPasswordChar = true; // Ẩn mật khẩu khi nhập
+            reTypePassword.UseSystemPasswordChar = true; // Ẩn mật khẩu khi nhập
         }
     }
 }

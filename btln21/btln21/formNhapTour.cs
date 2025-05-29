@@ -44,7 +44,7 @@ namespace btln21
 
         }
         
-        //auto lay gia tri cho textbox luong
+        //auto lay gia tri cho textbox doanh thu
         private void inputCN_tour_TextChanged(object sender, EventArgs e)
         {
             if (int.TryParse(inputCN_tour.Text, out int number) && int.TryParse(inputDuration_tour.Text, out int day))
@@ -122,6 +122,7 @@ namespace btln21
                     vehID += inputVehicle_tour.Text[i];
                 }
             }
+            //sự kiện sửa--------------------------------------------------------------------------------------------------------------------------------------
             if (isEdit)
             {
                 button1.Text = "Cập nhật";
@@ -153,6 +154,7 @@ namespace btln21
                     }
                 }
             }
+            //sự kiện thêm----------------------------------------------------------------------------------------------------------------------------------
             else
             {
                 if (string.IsNullOrEmpty(id))
@@ -160,7 +162,7 @@ namespace btln21
                     MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
                     return;
                 }
-                //kiem tra trung lap---------------------------------------------------------------------------------------------------------------------------
+                //kiem tra trung lap--------------------------------------------------------------------------------------------------------
                 if (DatabaseHelper.checkID(id, table, collumn))
                 {
                     MessageBox.Show("ID đã tồn tại. Vui lòng chọn ID khác.");
@@ -186,14 +188,14 @@ namespace btln21
             inputCN_tour.SelectedIndex = 0;
             inputDuration_tour.SelectedIndex = 0;
         }
-        //dua vao cac combobox-----------------------------------------------------------------------------------------------------------------------------
+        //dua data vao cac combobox-----------------------------------------------------------------------------------------------------------------------------
         private void loadCBCustomer()
         {
             ComboBox cb = inputCus_tour;
             string clm1 = "CustomerID", clm2 = "Name", table = "Customer";
             LoadCB(table, clm1, clm2, cb);
         }
-        //load cac data tu database ra combobox
+        //load cac data tu database ra combobox cb
         private void LoadCB(string table, string clm1, string clm2, ComboBox cb)
         {
             string query = "SELECT " + clm1 + "," + clm2 + " FROM " + table;
