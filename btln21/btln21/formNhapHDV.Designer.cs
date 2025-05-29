@@ -269,7 +269,7 @@
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(440, 55);
             btnCancel.TabIndex = 3;
-            btnCancel.Text = "Hủy bỏ";
+            btnCancel.Text = "Quay lại";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 

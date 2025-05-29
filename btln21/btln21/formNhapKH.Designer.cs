@@ -53,7 +53,7 @@
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(440, 55);
             btnCancel.TabIndex = 7;
-            btnCancel.Text = "Hủy bỏ";
+            btnCancel.Text = "Quay lại";
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
@@ -227,7 +227,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "formNhapKH";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "formNhapKH";
+            Text = "Thông tin khách hàng";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
