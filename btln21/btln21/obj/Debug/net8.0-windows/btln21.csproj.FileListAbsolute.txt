@@ -152,3 +152,4 @@ C:\Users\GIGABYTE\Desktop\Windows\LapTrinhWindows-N23\btln21\btln21\obj\Debug\ne
 C:\Users\GIGABYTE\Desktop\Windows\LapTrinhWindows-N23\btln21\btln21\obj\Debug\net8.0-windows\btln21.genruntimeconfig.cache
 C:\Users\GIGABYTE\Desktop\Windows\LapTrinhWindows-N23\btln21\btln21\obj\Debug\net8.0-windows\ref\btln21.dll
 C:\Users\GIGABYTE\Desktop\Windows\LapTrinhWindows-N23\btln21\btln21\obj\Debug\net8.0-windows\btln21.formNhapAdmin.resources
+C:\Users\GIGABYTE\Desktop\Windows\LapTrinhWindows-N23\btln21\btln21\obj\Debug\net8.0-windows\btln21.formDoiMK.resources

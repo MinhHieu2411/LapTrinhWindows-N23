@@ -43,7 +43,32 @@ namespace btln21
             inputRevenue_tour.Text = revenue.ToString();
 
         }
-        
+        public formNhapTour(string id, DateTime start, int duration, int cusnumber, string cusID, string hdvID, string vehID, int revenue, bool isReadMode)
+        {
+            InitializeComponent();
+            isRead = isReadMode;
+
+            if (isRead)
+            {
+                inputID_tour.Text = id;
+                inputStart_tour.Value = start;
+                inputDuration_tour.Text = duration.ToString();
+                inputCN_tour.Text = cusnumber.ToString();
+                inputCus_tour.Text = cusID;
+                inputHdv_tour.Text = hdvID;
+                inputVehicle_tour.Text = vehID;
+                inputRevenue_tour.Text = revenue.ToString();
+                
+                inputID_tour.Enabled = false;
+                inputStart_tour.Enabled = false;
+                inputDuration_tour.Enabled = false;
+                inputCN_tour.Enabled = false;
+                inputCus_tour.Enabled = false;
+                inputHdv_tour.Enabled = false;
+                inputVehicle_tour.Enabled = false;
+                inputRevenue_tour.Enabled = false;
+            }
+        }
         //auto lay gia tri cho textbox doanh thu
         private void inputCN_tour_TextChanged(object sender, EventArgs e)
         {
@@ -150,7 +175,7 @@ namespace btln21
                     }
                     else
                     {
-                        MessageBox.Show("Không tìm thấy hướng dẫn viên để cập nhật");
+                        MessageBox.Show("Không tìm thấy Tour để cập nhật");
                     }
                 }
             }

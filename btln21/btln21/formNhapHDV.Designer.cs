@@ -86,6 +86,7 @@
             // inputSalary_hdv
             // 
             inputSalary_hdv.Dock = DockStyle.Fill;
+            inputSalary_hdv.Enabled = false;
             inputSalary_hdv.Font = new Font("Segoe UI", 12F);
             inputSalary_hdv.Location = new Point(138, 243);
             inputSalary_hdv.Name = "inputSalary_hdv";

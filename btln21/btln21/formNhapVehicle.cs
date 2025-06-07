@@ -73,14 +73,19 @@ namespace btln21
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(inputID_vehicle.Text) || string.IsNullOrEmpty(inputDes_vehicle.Text) || string.IsNullOrEmpty(inputLP_vehicle.Text) || string.IsNullOrEmpty(inputCap_vehicle.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
+                return;
+            }
 
-            string id = inputID_vehicle.Text;
-            string des = inputDes_vehicle.Text;
-            string licenseplate = inputLP_vehicle.Text;
-            int cap = Convert.ToInt32(inputCap_vehicle.Text);
             //nếu sự kiện sửa xảy ra
             if (isEdit)
             {
+                string id = inputID_vehicle.Text;
+                string des = inputDes_vehicle.Text;
+                string licenseplate = inputLP_vehicle.Text;
+                int cap = Convert.ToInt32(inputCap_vehicle.Text);
                 btnConfirm.Text = "Cập nhật";
                 string query = @"UPDATE Vehicle
                     SET Description = @des, LicensePlate = @licenseplate, Capability = @cap
@@ -108,14 +113,15 @@ namespace btln21
             //su kien them nhu binh thuong
             else
             {
+
+                string id = inputID_vehicle.Text;
+                string des = inputDes_vehicle.Text;
+                string licenseplate = inputLP_vehicle.Text;
+                int cap = Convert.ToInt32(inputCap_vehicle.Text);
                 string table = "Vehicle";
                 string collumn = "VehicleID";
                 //check xem co truong nao trong khong
-                if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(inputDes_vehicle.Text) || string.IsNullOrEmpty(inputLP_vehicle.Text) || string.IsNullOrEmpty(inputCap_vehicle.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
-                    return;
-                }
+                
                 //kiem tra trung lap 
                 if (DatabaseHelper.checkID(id, table, collumn))
                 {

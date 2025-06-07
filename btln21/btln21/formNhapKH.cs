@@ -67,15 +67,20 @@ namespace btln21
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            string id = inputID_customer.Text;
-            string name = inputName_customer.Text;
-            string address = inputAddress_customer.Text;
-            int yob = Convert.ToInt32(inputYob_customer.Text);
-            string phone = inputPhone_customer.Text;
-
+            //check xem co truong nao trong khong
+            if (string.IsNullOrEmpty(inputID_customer.Text) || string.IsNullOrEmpty(inputName_customer.Text) || !int.TryParse(inputYob_customer.Text, out int year) || string.IsNullOrEmpty(inputPhone_customer.Text) || string.IsNullOrEmpty(inputAddress_customer.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
+                return;
+            }
             //nếu là sự kiện sửa
             if (isEdit)
             {
+                string id = inputID_customer.Text;
+                string name = inputName_customer.Text;
+                string address = inputAddress_customer.Text;
+                int yob = Convert.ToInt32(inputYob_customer.Text);
+                string phone = inputPhone_customer.Text;
                 string query = @"UPDATE Customer
                     SET Name = @name, YearOfBirth = @yob, Phone = @phone, Address = @Address
                     WHERE CustomerID = @id";
@@ -103,14 +108,14 @@ namespace btln21
             //sự kiện thêm
             else
             {
+                string id = inputID_customer.Text;
+                string name = inputName_customer.Text;
+                string address = inputAddress_customer.Text;
+                int yob = Convert.ToInt32(inputYob_customer.Text);
+                string phone = inputPhone_customer.Text;
                 string table = "Customer";
                 string collumn = "CustomerID";
-                //check xem co truong nao trong khong
-                if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(inputName_customer.Text) || !int.TryParse(inputYob_customer.Text, out int year) || string.IsNullOrEmpty(inputPhone_customer.Text) || string.IsNullOrEmpty(inputAddress_customer.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
-                    return;
-                }
+                
                 //kiem tra trung lap 
                 if (DatabaseHelper.checkID(id, table, collumn))
                 {

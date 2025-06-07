@@ -13,10 +13,13 @@ namespace btln21
 {
     public partial class Home : Form
     {
-        public Home()
+        public Home(string username)
         {
             InitializeComponent();
+            txtAdminUsername.Text = username;
         }
+
+
         //double click vao 1 cell ở hướng dẫn viên---------------------------------------------------------------------------
 
         private void dgvHDV_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -69,6 +72,27 @@ namespace btln21
                 // true = readonly
                 formNhapKH viewForm = new formNhapKH(id, name, yob, phone, address, true);
                 viewForm.ShowDialog();
+            }
+        }
+        //double click cell ở tour-------------------------------------------------------------------------------------------------
+        private void dgvTours_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvTours.Rows[e.RowIndex];
+
+                string id = row.Cells[0].Value.ToString();
+                DateTime.TryParse(row.Cells[1].Value.ToString(), out DateTime date);
+                int duration = Convert.ToInt32(row.Cells[2].Value);
+                int cusnumber = Convert.ToInt32(row.Cells[3].Value);
+                string cusID = row.Cells[4].Value.ToString();
+                string hdvID = row.Cells[5].Value.ToString();
+                string vehID = row.Cells[6].Value.ToString();
+                int revenue = Convert.ToInt32(row.Cells[7].Value);
+
+                formNhapTour viewForm = new formNhapTour(id, date, duration, cusnumber, cusID, hdvID, vehID, revenue, true);
+                viewForm.ShowDialog();
+
             }
         }
         //cac nut them--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -412,7 +436,8 @@ namespace btln21
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-
+            formDoiMK formDoiMK = new formDoiMK(txtAdminUsername.Text);
+            formDoiMK.ShowDialog();
         }
         //them quản trị viên-----------------------------------------------------------------------------------------------------------------------------------
         private void btnAddAdmin_Click(object sender, EventArgs e)
@@ -425,7 +450,7 @@ namespace btln21
         {
             DialogResult dialog = MessageBox.Show("Bạn sắp đăng xuất", "Thông báo", MessageBoxButtons.OKCancel);
 
-            if(dialog == DialogResult.OK)
+            if (dialog == DialogResult.OK)
             {
                 this.Hide();
                 Login login = new Login();
@@ -436,6 +461,16 @@ namespace btln21
             {
                 return;
             }
+        }
+
+        private void tpVehicle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

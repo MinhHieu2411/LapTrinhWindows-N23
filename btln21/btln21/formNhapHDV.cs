@@ -80,24 +80,25 @@ namespace btln21
         private void btnConfirm_Click(object sender, EventArgs e)
         {
 
-            string id = inputID_hdv.Text;
-            string name = inputName_hdv.Text;
-            string phone = inputPhone_hdv.Text;
-            string address = inputAddress_hdv.Text;
-
+            if (string.IsNullOrEmpty(inputID_hdv.Text) || string.IsNullOrWhiteSpace(inputName_hdv.Text) || string.IsNullOrEmpty(inputAddress_hdv.Text) || !int.TryParse(inputYob_hdv.Text, out int year) || string.IsNullOrEmpty(inputPhone_hdv.Text) || !int.TryParse(inputYears_hdv.Text, out int works))
+            {
+                MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
+                return;
+            }
 
             //su kien them nhu binh thuong
             if (!isEdit)
-            { 
+            {
+
+                string id = inputID_hdv.Text;
+                string name = inputName_hdv.Text;
+                string phone = inputPhone_hdv.Text;
+                string address = inputAddress_hdv.Text;
                 string table = "TourGuide";
                 string collumn = "TourGuideID";
             
             //check xem co truong nao nhap sai hoac de trong
-                if (string.IsNullOrEmpty(id) || string.IsNullOrWhiteSpace(inputName_hdv.Text) || string.IsNullOrEmpty(inputAddress_hdv.Text) || !int.TryParse(inputYob_hdv.Text, out int year) || string.IsNullOrEmpty(inputPhone_hdv.Text) || !int.TryParse(inputYears_hdv.Text, out int works))
-                {
-                MessageBox.Show("Vui lòng nhập đúng và đầy đủ thông tin.");
-                return;
-                }
+                
                 //check lai id neu trung lap (dbhelper)
                 if (DatabaseHelper.checkID(inputID_hdv.Text, table, collumn))
                 {
@@ -120,8 +121,11 @@ namespace btln21
             //nếu sự kiện sửa xảy ra
             else
             {
-                int year = int.Parse(inputYob_hdv.Text);
-                int works = int.Parse(inputYears_hdv.Text);
+
+                string id = inputID_hdv.Text;
+                string name = inputName_hdv.Text;
+                string phone = inputPhone_hdv.Text;
+                string address = inputAddress_hdv.Text;
                 decimal salary = 10000000 + works * 500000;
                 btnConfirm.Text = "Cập nhật";
                 string query = @"UPDATE TourGuide 

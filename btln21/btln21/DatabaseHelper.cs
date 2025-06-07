@@ -164,5 +164,17 @@ namespace btln21
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+        //doi mat khau -----------------------------------------------------------------------------------------------------------------------------------
+        public static bool updatePassword(string username, string newPassword)
+        {
+            string query = "UPDATE Admin SET password = @newPassword WHERE username = @username";
+            using (SqlConnection conn = GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@newPassword", newPassword);
+                cmd.Parameters.AddWithValue("@username", username);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }

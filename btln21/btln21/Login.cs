@@ -24,7 +24,7 @@
                 {
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK);
                     this.Hide();
-                    Home home = new Home();
+                    Home home = new Home(username);
                     home.ShowDialog();
                     this.Close();
                 }
